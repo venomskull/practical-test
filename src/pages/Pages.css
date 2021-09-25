@@ -1,11 +1,13 @@
 .page-container {
-    border: 1px solid black;
+    border: 2px solid #231F20;
+    border-radius: 7px;
     display:flex;
     flex-direction: column;
     max-width: 700px;
     margin: 30px;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .form-title {
@@ -13,11 +15,14 @@
     /* display: flex; */
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .cardNumber {
     /* border: 1px solid blue; */
-    padding: 5px 10px;
+    padding: 10px 10px;
     width: 100%;
 }
 
@@ -26,15 +31,96 @@
     width:100%;
     padding: 5px 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    
 }
 
 .textField {
     width: 100%;
 }
 
+.cvv {
+    /* border: 1px solid red; */
+    padding-right: 30px;
+    width: 100px;
+    -webkit-appearance: none;
+}
+
 .register-button {
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;
 }
+
+.submitButton {
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #FEB72B;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background-color: #E1B72B;
+    transition: all .2s ease-in-out; 
+    transform: scale(1.03); 
+    /* transform: scale(1.1);  */
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.errorMsg {
+    color: #d32f2f;
+    font-size: 0.75rem;
+}
+
+.exp-wrapper {
+    /* border: 1px solid rgb(15, 19, 238); */
+    position: relative;
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+    height: 100%;
+    line-height: 100%;
+    font-size: 24px;
+}
+  
+.exp-wrapper:after {
+    /* content: '/'; */
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    color: #aaa;
+}
+
+input.exp {
+    float: left;
+    font-family: monospace;
+    border: 0;
+    width: 18px;
+    outline: none;
+    appearance: none;
+    font-size: 14px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
